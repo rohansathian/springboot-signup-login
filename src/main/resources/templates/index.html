@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    .a{
+  color: white;
+  text-decoration: none;
+}
+.c{
+  color: white;
+  padding: 10px;
+  background-color: #FD5523;
+  border-color: white;
+  border-radius: 5px;
+  width: 40px;
+  height: 40px;
+  border:1px solid rgba(255, 255, 255, 0.54);
+  
+}
+.w{
+  color: white;
+}
+.c1{
+  color: white !important;
+  padding: 10px;
+  background-color: #FD5523;
+  border-color: white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border:1px solid rgba(255, 255, 255, 0.54);
+  
+}
+.c2{
+  color: white !important;
+  padding: 5px;
+  font-weight: bold;
+  background-color: #FD5523;
+  border-color :1px solid #FD5523;
+  border: #FD5523;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-right: 10px;
+  width: 170px;
+  height: 50px;
+  font-size: larger;
+  border-radius: 40px;
+
+}
+.c2:hover{
+  background-color: #FD5523;
+  color: white;
+}
+.c3{
+  margin-top: 30px;
+  position: relative;
+  color: white !important;
+  padding: 15px;
+  font-weight: bold;
+  background-color: #FD5523;
+  border-color :1px solid #FD5523;
+  border: #FD5523;
+  
+  width: 200px;
+  text-align:left;
+  height: 50px;
+  font-size: larger;
+  border-radius: 40px;
+
+}
+.c4{
+  color: white !important;
+  padding: 10px;
+  font-weight: bold;
+  background-color: #FD5523;
+  border-color :1px solid #FD5523;
+  border: #FD5523;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-right: 10px;
+  width: 230px;
+  height: 50px;
+  font-size: larger;
+  border-radius: 40px;
+
+
+}
+.tl{
+  font-size: large;
+}
+.bb{
+  margin-top: -10px;
+  padding: 12px;
+  font-size: small;
+  background-color: black;
+  color: white;
+  border-radius: 50%;
+ 
+}
+.b{
+  position: absolute;
+  top: 10%;
+  left: 78%;
+  background-color: black;
+  padding: 10px;
+  border-radius: 50%;
+}
+.o2{
+  position: relative;
+}
+.o21{
+  position: absolute;
+  top: -30%;
+  left: 75%;
+  font-size:x-small;
+  background-color: #FD5523;
+  border-radius: 50%;
+  padding: 4px;
+  color: white;
+}
+.bann{
+  position: relative;
+}
+.p1{
+  color: #FD5523;
+  font-weight: 600;
+  font-size:large;
+  letter-spacing:1px;
+  font-family: sans-serif;
+}
+.p2{
+  color:rgb(165, 165, 165);
+  font-size: larger;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+.p3{
+  margin-top: -40px;
+  margin-left: 14px;
+  color: white;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+.h1{
+  margin-top: 30px;
+  font-weight: bold;
+  color: white ;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+  font-size: 70px;
+}
+.h2{
+  margin-top: 30px;
+  margin-left: 12px;
+  color: white;
+  font-family: sans-serif;
+  font-size: x-large;
+}
+.r1{
+  border-radius: 50%;
+  border-color: #FD5523;
+  border: 1px solid #FD5523;
+}
+.l{
+  position: relative;
+}
+.l1{
+  position:absolute;
+  top: 30%;
+  right: -37%;
+  overflow: hidden;
+}
+.l2{
+  position:absolute;
+  top: 125%;
+  right: -8%;
+  left: 10%;
+  bottom: 90%;
+  overflow: hidden;
+}
+.bus{
+  position: absolute;
+  top: 37%;
+  left: 45%;
+  width: 800px;
+}
+.log{
+  position: absolute;
+  top: -1%;
+  left: 70%;
+  width: 270px;
+}
+.i{
+  background-color: #FD5523;
+  width: 1400px;
+  height: 200px;
+  rotate: 310deg;
+}.i2{
+  background-color: #FD5523;
+  width: 900px;
+  height: 80px;
+  rotate: 310deg;
+}
+.h3{
+  font-family: sans-serif;
+  color: #FD5523;
+  font-size: large;
+  font-weight: 800;
+}
+.h4{
+  font-family: sans-serif;
+  color:#062F3A;
+  font-size: 40px;
+  font-weight:800;
+}.h5{
+  font-family: sans-serif;
+  color: #FD5523;
+  font-size: 45px;
+  font-weight:800;
+}
+.p4{
+  line-height: 30px;
+  text-align: justify;
+  font-size: large;
+  font-family: sans-serif;
+  color: gray;
+}
+.world{
+  font-size: 40px;
+  background-color: #FD5523;
+  padding: 10px;
+  border-radius: 50%;
+  color: white;
+}
+.h6{
+  font-family: sans-serif;
+  color:black;
+  font-size: 18px;
+  font-weight:bold;
+}
+.p5{
+  font-family: sans-serif;
+  color: gray;
+}
+.cc{
+  padding: 5px;
+  border-radius: 50%;
+  color: white;
+  background-color:#FD5523;
+}
+.p6{
+  font-family: sans-serif;
+  color: rgb(85, 85, 85);
+}
+.p7{
+  font-family: sans-serif;
+  color: gray;
+}
+.imc{
+  position: relative;
+}
+.rv{
+  border-radius: 50%;
+  border:2px solid white;
+}
+.st{
+  color: #FFD25D;
+}
+.h7{
+  font-family: sans-serif;
+  font-weight: 600;
+  color: white;
+}
+.h8{
+  font-size: 48px;
+  font-family: sans-serif;
+  color: white;
+}
+.pl{
+  font-size: large;
+  padding: 25px;
+  background-color:white;
+  border-radius: 50%;
+}
+.pl:hover{
+  transition: 0.3s ease-in;
+  background-color: black;
+  color: white;
+}
+.imc1{
+  position: absolute;
+  top: -1%;
+  right: -2%;
+  border: 8px solid white;
+}
+.tri{
+  position: absolute;
+  top: -1%;
+  left:-14%;
+  color: white;
+  width: 70px;
+  rotate: 180deg;
+}
+.tri1{
+  position: absolute;
+  bottom: -11%;
+  left:77%;
+  color: white;
+  width: 70px;
+  rotate: 271deg;
+}
+.fl{
+  position: absolute;
+  width: 100px;
+  top: 117%;
+  rotate: 340deg;
+  right: 125%;
+  padding: 10px;
+  background-color: black;
+  border: 25px solid #FD5523;
+  border-radius: 50%;
+  z-index: 2;
+}
+.box{
+  position: absolute;
+  top: 115%;
+  right: 120%;
+  z-index: 2;
+  width: 300px;
+  height: 200px;
+  border-radius: 40px;
+  background-color: white;
+}
+.tri2{
+  position: absolute;
+  top: 98%;
+  right:179%;
+  color: white;
+  width: 70px;
+  rotate: 360deg;
+}
+.tri3{
+  position: absolute;
+  top: 146%;
+  right: 108%;
+  color: rgb(255, 0, 0);
+  width: 70px;
+  rotate: 360deg;
+}
+.sliding-text-one_wrap {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  /* optional */
+}
+
+.js-marquee-wrapper {
+  display: flex;
+  white-space: nowrap;
+  animation: slide-left 30s linear infinite;
+}
+
+.sliding-text_title {
+  font-size: 95px;
+  font-weight: 700;
+  color: transparent;
+  -webkit-text-stroke: 1px #FD5523;
+  text-transform: uppercase;
+  margin-right: 100px; /* Space between repeated text if duplicated */
+  font-family: Arial, sans-serif;
+}
+.sliding-text_title:hover{
+  color: #FD5523;
+  transition: 0.3s ease-in-out;
+}
+
+/* Keyframes for left sliding animation */
+@keyframes slide-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.card{
+  background-color: whitesmoke;
+  border-radius: 30px;
+}
+.h9{
+  font-family: sans-serif;
+  font-weight: 800;
+  color:#062F3A;
+  font-size: large;
+}
+.p8{
+  font-family: sans-serif;
+  color: gray;
+  line-height: 25px;
+}
+.ci{
+  position: relative;
+}
+.ci1{
+  position: absolute;
+  top:-4%;
+  right: -3%;
+}
+.wo{
+  padding: 10px;
+  background-color:#FD5523;
+  border: 20px solid white;
+  border-radius: 50%;
+  font-size: 40px;
+  color:white
+}
+.wo:hover{
+  transition: 0.3s ease-in-out;
+  background-color: #062F3A;
+  color: white;
+}
+.tri4{
+  position: absolute;
+  top:9%;
+  left:-32%;
+  width: 70px;
+  rotate: 173deg;
+  color: whitesmoke;
+}
+.h11{
+  position: absolute;
+  top: 28%;
+  left:1%;
+  font-size: 45px;                             
+  padding: 10px;
+  background-color: white;
+  border-radius: 50%;
+  font-family: sans-serif;
+  color: white;
+  -webkit-text-stroke: 1px  #062F3A;
+  z-index: 2;
+}
+.h11:hover{
+  transition: 0.3s ease-in-out;
+  color: #FD5523;
+  -webkit-text-stroke: #FD5523;
+}
+.box1{
+  position: absolute;
+  top: 35%;
+  left:-1%;
+  z-index: 1;
+  width: 76px;
+  height: 75px;
+  border-radius: 0px 30px 0px 0px;
+  color:red;
+  background-color: white;
+}
+.tri5{
+  position: absolute;
+  top:30%;
+  left:-2%;
+  width: 70px;
+  rotate: 90deg;
+  color: whitesmoke;
+  
+}
+.tri6{
+  position: absolute;
+  top:37.5%;
+  left:11%;
+  width: 70px;
+  rotate: 360deg;
+  color: whitesmoke;
+  
+}
+.fl1{
+
+  margin-left: -200px;
+  width: 1200px;
+}
+.sl{
+  position: relative;
+}
+.sl1{
+  overflow:hidden;
+  position: absolute;
+  top: 49%;
+  left: 22%;
+  background-color: #F4F5F9;
+  width: 900px;
+  height: 50px;
+  rotate: 80deg;
+}
+.in5  {
+  color: white ;
+  padding: 5px;
+  font-weight: bold;
+  background-color:#194b58;
+  border-color :1px solid #FD5523;
+  border: #FD5523;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-right: 10px;
+  width: 420px;
+  height: 40px;
+  font-size: larger;
+  border-radius: 40px;
+
+}
+.h21{
+  color: white;
+  font-family: sans-serif;
+
+}
+.ic{
+  background-color: #1d4955;
+  color: white;
+  padding: 15px;
+  border-radius: 50%;
+}
+.ic:hover{
+  background-color: #FD5523;
+  color: white;
+  transition: 0.3s ease-in-out;
+
+}
+.ic1:hover{
+  transition: 0.3s ease-in-out;
+  background-color: #FD5523;
+  color: white;
+}
+.ic1{
+  background-color: #1d4955;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+.p21{
+  color:#aabbc0;
+  font-family: sans-serif;
+  font-size: large;
+}
+.p211{
+  color:#aabbc0;
+  font-family: sans-serif;
+  font-size:15px;
+}
+.p0{
+  color:#165465;
+}
+.h31{
+  color:#aabbc0;
+  font-family: sans-serif;
+  font-size: medium;
+}
+.li:hover{
+  
+}
+.bg1{
+  background-color: white;
+  height: 190px;
+  margin-top: -62px;
+  border-radius: 10px;
+}
+.oni{
+  position: relative;
+}
+.on{position: absolute;
+  top: 0%;
+  width: 300px;
+  height: 100px;
+  background-color: #062F3A;
+  border-radius: 10px 0px 0px 0px;
+}
+.on1{position: absolute;
+  top: 0%;
+  right: 0%;
+  width: 300px;
+  height: 100px;
+  background-color: #062F3A;
+  border-radius: 0px 10px 0px 0px;
+
+}
+ 
+  </style>
+</head>
+<body style="background-color:#062F3A">
+  <div class="container-fluid">
+     <nav style="background-color:#062F3A">
+    <div style="display: flex;justify-content: space-between;background-color:#062F3A" class="tl">
+      <div style="display: flex;justify-content: center;padding: 10px;column-gap: 10px;">
+        <a href="" style="color: white;text-decoration: none;"><span><i class="fa-solid fa-phone-volume"> </i></span> +1 (550) 250 5260</a>
+        <hr  style="opacity: 50%;margin-top: -5px;">
+        <a href="" style="color: white;text-decoration: none;"><span><i class="fa-solid fa-envelope"></i> </span> info@tanspot24.com</a>
+        <hr  style="opacity: 50%;margin-top: -5px;">
+        <a href="" style="color: white;text-decoration: none;"><span><i class="fa-solid fa-location-dot"> </i></span> 4124 Cimmaron Road, CA 92806</a>
+
+      </div>
+      <div style="display:flex;justify-content: center;background-color: #FD5523;column-gap: 50px;padding: 10px;border-radius:30px 0Px 0px 30Px ;width: 500px;margin-top: -8px;">
+       <div style="margin-top: 10px;">
+      <a href="" class="a" style="margin-top: 10px;"><span><i class="fa-solid fa-clock"></i> </span> Mon - Fri: 09:00 - 05:00</a>
+
+       </div>
+       <div>
+      <button class="c tl"><span><i class="fa-brands fa-twitter"></i></span></button>
+      <button class="c tl"><span><i class="fa-brands fa-facebook"></i></span></button>
+      <button class="c tl"><span><i class="fa-brands fa-pinterest"></i></span></button>
+      <button class="c tl   "><span><i class="fa-brands fa-instagram"></i></span></button>
+       </div>
+      
+      
+      
+    </div>
+    </div>
+    
+  </nav>
+  <div style="background-color: white;display: flex;justify-content:space-between;" >
+    <div style="background-color: #FD5523;padding: 10px;">
+      <img src="/img/logo-1.png" width="100%" style="margin-top: 10px;">
+    </div>
+    <div style="display: flex;justify-content: center;font-family: sans-serif;font-size: x-large;column-gap: 30px;">
+      <h5 style="color: #FD5523;">Home <i class="fa-solid fa-angle-down" style="font-size: small;"></i></h5>
+      <h5>About </h5>
+      <h5>Pages</h5>
+      <h5>Services</h5>
+      <h5>Shop</h5>
+      <h5>Blog</h5>
+      <h5>Contact</h5>
+    </div>
+    <div style="display: flex;justify-content: center; column-gap: 20px;margin-right: 10px;">
+      <i class="fa-solid fa-magnifying-glass" style="font-size: x-large;margin-top: 30px;"></i>
+      <i class="fa-solid fa-cart-shopping o2" style="font-size: x-large;margin-top: 30px;"><span class="o21">02</span></i>
+      <button class="c1" style="margin-top: 20px;"> <i class="fa-solid fa-bars w" style="font-size: larger;"></i></button>
+      <button class="c2">Track Order <span class="bb"> <i class="fa-solid fa-arrow-right " ></i></span></button>
+    </div>
+    
+  </div>
+  </div>
+<div class="l" style="overflow: hidden;">
+<div style="margin-left: 110px;margin-top: 165px;overflow: hidden;">
+  <div>
+    <p class="p1">SPECIALIST IN MODERN TRANSPORTATION</p>
+    <h1 class="h1">MODERN LOGISTIC<br><span style="color: #FD5523;">PROVIDER</span></h1>
+    <p class="p2">Logistic service provider company plays a pivotal role in the global<br>
+      supply chain ecosystem managing.
+    </p>
+    <div style="display: flex;">
+      <button class="c3">Discover More <span class="b"> <i class="fa-solid fa-arrow-right " ></i></span></button>
+      <div style="margin-top: 30px;margin-left: 35px;">
+          <img src="/img/banneronereview11.jpg" class="r1">
+          <img src="/img/banneronereview12.jpg" class="r1" style="margin-left: -20px;">
+          <img src="/img/banneronereview13.jpg" class="r1"  style="margin-left: -20px;">
+      </div>
+      <div>
+        <h5 class="h2">Customer Satisfied</h5>
+        <p class="p3">4.8 (15k Reviews)</p>
+      </div>
+      <span class="i l1"></span>
+      <span class="i2 l2"></span>
+      <img src="/img/banneroneimg1.png" width="100%" class="bus">
+      <img src="/img/banneroneshape3.png" width="100%" class="log">
+    
+    </div>
+  </div>
+</div>
+<br><br><br><br><br><br><br><br><br>
+</div>
+<div style="background-color: white;">
+<div>
+  <br><br><br><br>
+  <div style="margin-left: 110px;margin-top: 40px;display: flex;">
+    <!-- left side -->
+    <div class="imc">
+      <img src="/img/aboutoneimg1.jpg" width="550px" style="border-radius: 40px;">
+      <!-- position absolute -->
+      <div style="background-color: #FD5523;padding: 20px;border-radius: 50px;width: 250px;" class="imc1">
+        <div>
+        </div><div>
+        </div>
+      
+
+        <div>
+          <img src="/img/aboutonereviewimg11.jpg" class="rv">
+          <img src="/img/aboutonereviewimg12.jpg" class="rv" style="margin-left: -17px;">
+          <img src="/img/aboutonereviewimg13.jpg" class="rv"  style="margin-left: -17px;">
+          <img src="/img/aboutonereviewimg14.jpg" class="rv"  style="margin-left: -17px;">
+        </div>
+        <div style="margin-top: 10px;">
+          <i class="fa-solid fa-star st"></i>
+          <i class="fa-solid fa-star st"></i>
+          <i class="fa-solid fa-star st"></i>
+          <i class="fa-solid fa-star st"></i>
+          <i class="fa-solid fa-star st"></i>
+        </div>
+        <div style="margin-top: -10px;">
+          <h4 class="h7">Clients 4.8 (3,567 Reviews)</h4>
+        </div>
+        <div style=" margin-top:-10px;display: flex; ">
+          <h1 class="h8" style="margin-top: 20px;">35+</h1>
+          <h4 class="h7" style="margin-left: 20px;line-height: 30px;">Years Of<br> Experience</h4>
+        </div>
+        <div style="display: flex;">
+          <span><i class="fa-solid fa-play pl"></i></span>
+          <h3 style="font-size: 20px;color: white;font-weight: bolder;font-family: sans-serif;margin-left: 20px;">Watch Viceo</h3>
+        </div>
+      </div>
+    </div>
+
+    <!-- right side -->
+    <div style="margin-left: 130px;margin-top: -50px;">
+      <h6 class="h3" style="margin-left: 10px;">ABOUT US</h6>
+      <h1 class="h4" style="margin-top: -30px;margin-left: -40px;">Our Expertise Stands in</h4>
+      <h1 class="h5" style="margin-top: -30px;margin-left: -40px;">Logistics Solutions</h4>
+        <p class="p4" style="margin-left: -35px;margin-top: 10px;">Logistic service provider company plays a pivotal role in the global supply chain<br> ecosystem by efficiently managing the movement of goods from origin to final<br> destination. These companies offer a diverse.</p>
+
+        <div style="margin-top: 30px;margin-left: -50px; display: flex;justify-content:center;column-gap: 100px;">
+          <div style="display: flex;justify-content: center;column-gap: 15px;">
+            <span ><i class="fa-solid fa-earth-americas world" ></i></span>
+            <div>
+              <h4 class="h6" style="margin-top: -5px;">Worldwide Service</h2>
+              <p class="p5" style="margin-top: -20px;">Logistic service provider<br> company plays a pivotal role<br> in the global</p>
+            </div>
+          </div>
+          <div style="display: flex;justify-content: center;column-gap: 15px;margin-left: -20px;">
+            <span ><i class="fa-solid fa-users world" ></i></span>
+            <div>
+              <h4 class="h6" style="margin-top: -5px;">24/7 Online Support</h2>
+              <p class="p5" style="margin-top: -20px;">Logistic service provider<br> company plays a pivotal role<br> in the global</p>
+            </div>
+          </div>
+        </div>
+
+        <div style="display: flex;justify-content: center;column-gap: 15px; margin-top: -10px;margin-left: -80px;">
+          <div style="margin-top: 12px;">
+            <span><i class="fa-solid fa-check cc"></i></span>
+          </div>
+          <p class="p6" style="margin-left: -5px;">Quality Control System</p>
+
+          <div style="margin-top: 12px;margin-left: 150px;">
+            <span><i class="fa-solid fa-check cc"></i></span>
+          </div>
+          <p class="p6" style="margin-left: -5px;">100% Satisfaction Guarantee</p>
+        </div>
+
+         <div style="display: flex;justify-content: center;column-gap: 15px; margin-top: -10px; margin-left: -163px">
+          <div style="margin-top: 12px;">
+            <span><i class="fa-solid fa-check cc"></i></span>
+          </div>
+          <p class="p6" style="margin-left: -5px;">Affrodable Cost</p>
+
+          <div style="margin-top: 12px;margin-left: 205px;">
+            <span><i class="fa-solid fa-check cc"></i></span>
+          </div>
+          <p class="p6" style="margin-left: -5px;">On Time Delivery</p>
+        </div>
+
+        <div style="display: flex;justify-content: center;column-gap: 60px;margin-left: -95px;">
+          <div>
+            <button class="c2">Read More <span class="bb"> <i class="fa-solid fa-arrow-right " ></i></span></button>
+          </div>
+          <div style="display: flex;justify-content: center;column-gap: 10px;width:200px ;">
+            <img src="/img/aboutoneauthorimg1.jpg" alt="" style="padding: 5px;background-color: #FD5523;border-radius: 50%;border-block-start-color: #FD5523;">
+            
+            <div>
+              <h3>Dainel Brain</h3>
+              <p style="margin-top: -15px;" class="p7">Co-Founder</p>
+            </div>
+          </div>
+        
+          <div >
+            <img src="/img/aboutoneauthorsign.png">
+          </div>
+
+        </div>
+
+
+    </div>
+  </div>
+
+  <section class="sliding-text-one">
+  <div class="sliding-text-one_wrap">
+    <ul class="sliding-text_list marquee_mode">
+      <div class="js-marquee-wrapper">
+        <div class="js-marquee">
+          <h2 class="sliding-text_title">100% TRUSTED TRANSPORT</h2>
+        </div>
+        <DIV style="margin-top: 100px;margin-right: 40px;">
+          <img src="/img/slidingtexticon1.png" alt="">
+        </DIV>
+        <div class="js-marquee">
+          <h2 class="sliding-text_title">TRACKING</h2>
+        </div>
+        <DIV style="margin-top: 100px;margin-right: 40px;">
+          <img src="/img/slidingtexticon1.png" alt="">
+        </DIV>
+        <div class="js-marquee">
+          <h2 class="sliding-text_title">DELIVERY SERVICES</h2>
+        </div>
+      </div>
+    </ul>
+  </div>
+</section>
+
+</div>
+
+<div style="background-color: white;">
+  <div style="display: flex;justify-content: center;"><h6 class="h3">OUR SERVICES</h6></div>
+  <div style="display: flex;justify-content: center;margin-top: -130px;"><h6 class="h4">Provide Efficient Logistics</h6></div>
+  <div style="display: flex;justify-content: center;margin-top: -210px;padding: 10px;"><h6 class="h5">Solutions Business</h6></div>
+
+  <div style="margin-top: -80px;  margin-left: 120px;margin-right: 120px;display: flex;justify-content: center;column-gap: 33px;padding: 20px;">
+    <div class="card ci">
+      <img src="/img/servicesone11.jpg" style="border-radius: 30px 30px 0px 0px;">
+      <div class="ci1">
+        <i class="fa-solid fa-globe wo"></i>
+        
+      </div>
+      <h2 class="h11">01</h2>
+      <div class="box1"> </div>
+      <img src="/img/tRXa2.png" class="tri6">
+      <div style="padding: 15px;">
+        <h5 class="h9">International Shipping</h5>
+        <p class="p8" style="margin-top: -25px;">A logistic service provider company plays a pivotal role in the global logistic service.</p>
+        <h5 class="h9">Read More <i class="fa-solid fa-arrow-right" style="margin-top: 5px;"></i></h5>
+
+      </div>
+    </div>
+
+    <div class="card ci">
+      <img src="/img/servicesone12.jpg" style="border-radius: 30px 30px 0px 0px;">
+      <div class="ci1">
+        <i class="fa-solid fa-ship wo"></i>
+        
+        
+      </div>
+      <h2 class="h11">02</h2>
+      <div class="box1"> </div>
+      <img src="/img/tRXa2.png" class="tri5">
+      <img src="/img/tRXa2.png" class="tri6">
+      <div style="padding: 15px;">
+        <h5 class="h9">Ocean Freight</h5>
+        <p class="p8" style="margin-top: -25px;">A logistic service provider company plays a pivotal role in the global logistic service.</p>
+        <h5 class="h9">Read More <i class="fa-solid fa-arrow-right" style="margin-top: 5px;"></i></h5>
+
+      </div>
+    </div>
+
+    <div class="card ci">
+      <img src="/img/servicesone13.jpg" style="border-radius: 30px 30px 0px 0px;">
+      <div class="ci1">
+        <i class="fa-solid fa-train wo"></i>
+        
+      </div>
+      <h2 class="h11">03</h2>
+      <div class="box1"> </div>
+      <img src="/img/tRXa2.png" class="tri5">
+      <img src="/img/tRXa2.png" class="tri6">
+      <div style="padding: 15px;">
+        <h5 class="h9">Rail Freight</h5>
+        <p class="p8" style="margin-top: -25px;">A logistic service provider company plays a pivotal role in the global logistic service.</p>
+        <h5 class="h9">Read More <i class="fa-solid fa-arrow-right" style="margin-top: 5px;"></i></h5>
+
+      </div>
+    </div>
+
+    <div class="card ci">
+      <img src="/img/servicesone14.jpg" style="border-radius: 30px 30px 0px 0px;">
+      <div class="ci1">
+        <i class="fa-solid fa-truck-fast wo"></i>
+        
+      </div>
+      <h2 class="h11">04</h2>
+      <div class="box1"> </div>
+      <img src="/img/tRXa2.png" class="tri5">
+      <img src="/img/tRXa2.png" class="tri6">
+      <div style="padding: 15px;">
+        <h5 class="h9">Road Freight</h5>
+        <p class="p8" style="margin-top: -25px;">A logistic service provider company plays a pivotal role in the global logistic service.</p>
+        <h5 class="h9">Read More <i class="fa-solid fa-arrow-right" style="margin-top: 5px;"></i></h5>
+
+      </div>
+    </div>
+
+  
+  </div>
+    <div style="background-color: #062F3A;margin-top: -16px;">
+    <div style="margin-left: 110px;margin-right: 120px;">
+
+      <div style="display: flex;justify-content: space-between;">
+        <div style="margin-top: 90px;">
+          <h1 style="color: white;font-family: sans-serif;">Subscribe To Our Newsletter To<br> Get Latest Update</h2>
+          </div>
+          <div style="display: flex;justify-content: center;margin-top: 110px;column-gap: 10px;">
+            <div>
+              <input type="text" placeholder=" Enter email" class="in5">
+            </div>
+            <div>
+              <button class="c2">Subscribe <span class="bb"> <i class="fa-solid fa-arrow-right " ></i></span></button>
+            </div>
+          </div>
+        </div>
+
+        <div style="display: flex;justify-content: space-between;margin-top: 70px;">
+          <div style="margin-top: 25px;">
+            <img src="/img/footerlogo.png" alt="">
+            <p style="color: #c9cbcf;font-family: sans-serif;font-size: medium;line-height: 27px;">Secure other greater pleasures, or<br> else he endures pains to avoid worse<br> pains selection</p>
+            <hr style="color: #554e4e;opacity: 20%;">
+            <div style="display: flex;justify-content: left;column-gap: 10px;">
+              <i class="fa-brands fa-facebook-f ic"></i>
+              <i class="fa-brands fa-instagram ic"></i>
+              <i class="fa-brands fa-twitter ic"></i>
+              <i class="fa-brands fa-pinterest ic"></i>
+            </div>
+          </div>
+          <div>
+            <h2 class="h21">Quick Links</h2><br>
+            <div style="margin-top: -20px;">
+            <p class="p21">About Us</p>
+            <p class="p21">Portfolio</p>
+            <p class="p21">Help & FAQs</p>
+            <p class="p21">Blog</p>
+            <p class="p21">Contact</p>
+            </div>
+            
+
+          </div>
+          <div>
+            <h2 class="h21">Our Services</h2><br>
+            <div style="margin-top: -20px;">
+               <p class="p21">International Shipping</p>
+            <p class="p21">Ocean Freight</p>
+            <p class="p21">Rail Freight</p>
+            <p class="p21">Road Freight</p>
+            <p class="p21">Local Truck Transport</p>
+            </div>
+           
+          </div>
+          <div>
+            <h2 class="h21">Official Info</h2>
+            <div style="display: flex;">
+              <div style="margin-top: 20px;"><i class="fa-solid fa-phone-volume ic1"></i></div>
+              <div style="margin-left: 10px;">
+                <div>
+                  <p class="p211">(88) 574 7546 027</p>
+                  <p class="p211" style="margin-top: -10px;">(88) 574 7546 027</p>
+                </div>
+              </div>
+            </div>
+
+            <div style="display: flex;">
+              <div style="margin-top: 20px;"><i class="fa-solid fa-envelope ic1"></i></div>
+              <div style="margin-left: 10px;">
+                <div>
+                  <p class="p211">example@gmail.com</p>
+                  <p class="p211" style="margin-top: -10px;">example@gmail.com</p>
+                </div>
+              </div>
+            </div>
+
+            <div style="display: flex;">
+              <div style="margin-top: 20px;"><i class="fa-solid fa-location-dot ic1"></i></div>
+              <div style="margin-left: 10px;">
+                <div>
+                  <p class="p211">4517 Washington Ave.</p>
+                  <p class="p211" style="margin-top: -10px;">Manchester, 95</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+<p class="p0">------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+<div style="margin-left: 110px;margin-right: 120px;">
+    <div style="display: flex;justify-content: space-between;">
+      <div><h3 class="h31">© Copywright 2025 by <span style="color: #FD5523;">Tanspot.com</span> All Rights Reserved.</h3></div>
+      <div>
+        <div style="display: flex;justify-content: center;column-gap: 40px;">
+          <h3 class="h31">Support</h3>
+          <h3 class="h31">Terms and Condition</h3>
+          <h3 class="h31">Privacy and policy</h3>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+  </div>

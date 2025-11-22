@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>404 Error - Page Not Found</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+
+    background-image: url('a-11.webp'); /* Same style as your home page */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-blend-mode: darken;
+}
+
+.container{
+    max-width: 600px;
+    padding: 40px;
+    border-radius: 20px;
+    border: 2px solid rgba(255,255,255,0.4);
+    backdrop-filter: blur(25px);
+    text-align: center;
+    color: #fff;
+    transition: 0.3s ease;
+}
+
+.container h1{
+    font-size: 6rem;
+    letter-spacing: 3px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.container h2{
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.container p{
+    font-size: 1rem;
+    opacity: 0.9;
+    margin-bottom: 25px;
+}
+
+button{
+    padding: 12px 25px;
+    background: #fff;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover{
+    background: rgba(255,255,255,0.7);
+    transform: translateY(-3px);
+}
+
+@media (max-width:450px){
+    .container h1{ font-size: 4rem; }
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+    <h1>404</h1>
+    <h2>Oops! Page Not Found</h2>
+    <p>The page you’re looking for doesn’t exist or may have been moved.</p>
+    <button onclick="window.location.href='index.html'">Go Home</button>
+</div>
+
+</body>
+</html>
