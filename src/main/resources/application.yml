@@ -5,15 +5,17 @@ server:
 
 spring:
   datasource:
-    password: farhana
-    url: jdbc:postgresql://localhost:5433/registration
-    username: postgres
+    # prefer environment variables; fallback defaults kept for local dev
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5433/registration}
+    username: ${SPRING_DATASOURCE_USERNAME:postgres}
+    password: ${SPRING_DATASOURCE_PASSWORD:farhana}
     driver-class-name: org.postgresql.Driver
+
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: ${SPRING_JPA_HIBERNATE_DDL_AUTO:update}
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.PostgreSQLDialect 
+        # optional; Hibernate can auto-detect dialect from driver in modern versions
         format_sql: true
-    show-sql: true
+    show-sql: ${SPRING_JPA_SHOW_SQL:true}
