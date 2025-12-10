@@ -1,10 +1,10 @@
 package com.signup.demo.model;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-
 
 @Entity
 public class MyAppUser {
@@ -14,7 +14,16 @@ public class MyAppUser {
     private Long id;
     private String email;
     private String password;
+    @Column(unique = true, nullable = false)
     private String username;
+    @Column(nullable = false)
+    private String role = "USER";
+    public String getRole() {
+         return role;
+    }
+    public void setRole(String role) {
+         this.role = role; 
+    }
     public Long getId() {
         return id;
     }
@@ -39,6 +48,14 @@ public class MyAppUser {
     public void setUsername(String username) {
         this.username = username;
     }
+    private boolean isAdmin = false;
+    public boolean isAdmin() { 
+        return isAdmin;
+     }
+    public void setAdmin(boolean admin) {
+         this.isAdmin = admin; 
+    }
+
      
 
 }

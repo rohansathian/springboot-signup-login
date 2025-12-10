@@ -1,0 +1,115 @@
+<!-- <!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Admin Dashboard</h1>
+    <p>Active logged in users: <strong th:text="${activeCount}"></strong></p>
+    <p>Active users: <span th:each="u : ${activeUsers}" th:text="${u} + ' '"></span></p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th><th>Username</th><th>Email</th><th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr th:each="user : ${users}">
+          <td th:text="${user.id}"></td>
+          <td th:text="${user.username}"></td>
+          <td th:text="${user.email}"></td>
+          <td>
+            <a th:href="@{'/admin/edit/' + ${user.id}}">Edit</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <a href="/index">Back to home</a>
+  </div>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<!-- add class to change layout for this page only -->
+<body class="admin-body">
+  <div class="admin-container">
+    
+    <!-- Header -->
+    <div class="admin-header">
+      <div>
+        <h1 class="admin-title">Admin Dashboard</h1>
+        <p class="admin-subtitle">
+          Manage registered users, see who’s online, and edit their details.
+        </p>
+      </div>
+
+      <div class="admin-stats">
+        <span class="stat-pill">
+          Active users: <strong th:text="${activeCount}">0</strong>
+        </span>
+        <span class="stat-pill">
+          Total users: <strong th:text="${#lists.size(users)}">0</strong>
+        </span>
+      </div>
+    </div>
+
+    <!-- Active users list -->
+    <div class="active-list">
+      <strong>Currently logged in:</strong>
+      <span th:if="${#lists.isEmpty(activeUsers)}">No active sessions</span>
+      <span th:each="u : ${activeUsers}" class="active-chip" th:text="${u}">user</span>
+    </div>
+
+    <!-- Users table -->
+    <div class="admin-table-wrapper">
+      <table class="admin-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th>Admin?</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr th:each="user : ${users}">
+            <td th:text="${user.id}"></td>
+            <td th:text="${user.username}"></td>
+            <td th:text="${user.email}"></td>
+            <td th:text="${user.role}">USER</td>
+            <td th:text="${user.admin} ? 'Yes' : 'No'"></td>
+            <td>
+              <a class="btn-outline"
+                 th:href="@{'/admin/edit/' + ${user.id}}">Edit</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Footer -->
+    <div class="admin-footer">
+      <span>Logged in as Admin Panel</span>
+      <div>
+        <a href="/index" class="btn-link btn-secondary">← Back to Home</a>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

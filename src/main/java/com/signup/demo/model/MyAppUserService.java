@@ -1,40 +1,45 @@
 package com.signup.demo.model;
- 
-import java.util.Optional;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import lombok.AllArgsConstructor;
-
+import lombok.RequiredArgsConstructor;
 
 @Service
-@AllArgsConstructor
-public class MyAppUserService implements UserDetailsService{
+@RequiredArgsConstructor
+public class MyAppUserService implements UserDetailsService {
 
-    @Autowired
-    private MyAppUserRepository repository;
-   
+    private final MyAppUserRepository repository;
+
     @Override
-    public UserDetails loadUserByUsername(String username)  throws UsernameNotFoundException {
-       
-        Optional<MyAppUser> user = repository.findByUsername(username);
-        if (user.isPresent()){
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 
-            var userObj = user.get();
-            return User.builder()
-                .username(userObj.getUsername())
-                .password(userObj.getPassword())
-                .build();
-        }else{
-            throw new UsernameNotFoundException(username);
+        MyAppUser user = repository.findByUsername(username)
+                .orElseThrow(() -> new UsernameNotFoundException(username));
+
+        // 👇 build roles/authorities
+        List<GrantedAuthority> authorities = new ArrayList<>();
+
+        // every user has at least ROLE_USER
+        authorities.add(new SimpleGrantedAuthority("ROLE_USER"));
+
+        // if is_admin = true in DB → also add ROLE_ADMIN
+        if (user.isAdmin()) {
+            authorities.add(new SimpleGrantedAuthority("ROLE_ADMIN"));
         }
+
+        return new User(
+                user.getUsername(),
+                user.getPassword(),
+                authorities
+        );
     }
 }
-
-
-

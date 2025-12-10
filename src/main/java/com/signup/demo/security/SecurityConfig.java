@@ -26,6 +26,8 @@ public class SecurityConfig {
 
     @Autowired
     private final MyAppUserService appUserService;
+    @Autowired
+    private final CustomAuthenticationSuccessHandler customSuccessHandler;
 
     @Bean
     public UserDetailsService userDetailsService(){
@@ -53,14 +55,19 @@ public class SecurityConfig {
                  .csrf(AbstractHttpConfigurer::disable)
                  .formLogin(httpForm ->{
                      httpForm.loginPage("/login").permitAll();
+                     httpForm.successHandler(customSuccessHandler);
                      httpForm.defaultSuccessUrl("/index", true);
                           
                  })
                  
                  .authorizeHttpRequests(registry ->{
                      registry.requestMatchers("/dev/**", "/req/signup", "/css/**", "/js/**", "/img/**", "/login").permitAll();
+                     registry.requestMatchers("/admin/**").hasRole("ADMIN");
                      registry.anyRequest().authenticated();
-                    }) 
+                    })
+                    .exceptionHandling(exception ->
+                        exception.accessDeniedPage("/404")
+                    ) 
 
                  .build();
     }

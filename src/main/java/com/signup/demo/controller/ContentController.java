@@ -1,20 +1,14 @@
 package com.signup.demo.controller;
 
-import java.security.Principal;
-
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import com.signup.demo.model.MyAppUser;
-import com.signup.demo.model.MyAppUserRepository;
 
 @Controller
 public class ContentController {
 
-    @Autowired
-    private MyAppUserRepository myAppUserRepository;
+    // @Autowired
+    // private MyAppUserRepository myAppUserRepository;
 
     @GetMapping("/login")
     public String login() {
@@ -28,16 +22,14 @@ public class ContentController {
 
     // Single mapping for /index that adds username to the model when logged in
     @GetMapping("/index")
-    public String home(Model model, Principal principal) {
-        if (principal != null) {
-            // principal.getName() should be the username stored by Spring Security
-            MyAppUser user = myAppUserRepository.findByUsername(principal.getName())
-                                .orElse(null);
-            if (user != null) {
-                model.addAttribute("username", user.getUsername());
-                model.addAttribute("email", user.getEmail());
-            }
-        }
+    public String home() {
         return "index";
     }
+
+    @GetMapping("error/404")
+    public String error404() {
+        return "error/404";
+    }
+    
+    
 }

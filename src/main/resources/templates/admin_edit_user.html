@@ -1,0 +1,83 @@
+<!-- <!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Edit User</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Edit User</h1>
+    <form th:action="@{/admin/edit}" method="post" th:object="${user}">
+      <input type="hidden" th:field="*{id}" />
+      <label>Username: <input th:field="*{username}" /></label><br/>
+      <label>Email: <input th:field="*{email}" /></label><br/>
+      <label>Password (leave blank to keep current): <input type="password" th:field="*{password}" /></label><br/>
+      <button type="submit">Save</button>
+    </form>
+    <a href="/admin/dashboard">Back</a>
+  </div>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Edit User</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body class="admin-body">
+  <div class="admin-container">
+
+    <!-- Header -->
+    <div class="admin-header">
+      <div>
+        <h1 class="admin-title">Edit User</h1>
+        <p class="admin-subtitle">
+          Update user details securely from the admin panel.
+        </p>
+      </div>
+    </div>
+
+    <!-- Edit Form Card -->
+    <div style="max-width: 420px; margin: 0 auto; margin-top: 1rem;">
+
+      <form th:action="@{/admin/edit}" method="post" th:object="${user}">
+        
+        <input type="hidden" th:field="*{id}" />
+
+        <div class="inputbox">
+          <input type="text" th:field="*{username}" required>
+          <label>Username</label>
+        </div>
+
+        <div class="inputbox">
+          <input type="email" th:field="*{email}" required>
+          <label>Email</label>
+        </div>
+
+        <div class="inputbox">
+          <input type="password" th:field="*{password}">
+          <label>New Password (optional)</label>
+        </div>
+
+        <button type="submit" class="btn-outline" style="width: 100%; margin-top: 10px;">
+          Save Changes
+        </button>
+      </form>
+
+    </div>
+
+    <!-- Footer -->
+    <div class="admin-footer">
+      <span>Edit Panel</span>
+      <div>
+        <a href="/admin/dashboard" class="btn-link btn-secondary">← Back to Dashboard</a>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
